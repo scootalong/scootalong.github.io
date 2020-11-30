@@ -7,15 +7,84 @@ body {
 	background:#3de2ff;
 	z-index:-10;
 	position:fixed;
+	
+	
 }
+.page-wrapper {
+  position: relative;
+  height:100%;
+  margin: 0px auto 0px auto;
+  max-width: 1900px;
+/*   background-color:yellow; */
+}
+.main {
+	width: 100%;
+	height:100%;
+	opacity:0.7;
+	/* background-color:red; */
+}
+.menu {
+	
+	width: 200px;
+	height:200px;
+	background-color:rgba(20, 23, 245,1); /*blue*/
+	
+	z-index:4;
+	border-style:dashed;
+	border-color:white;
+	box-shadow: 0 12px 16px 0 rgba(255,255,255,0.24), 0 17px 50px 0 rgba(255,255,255,0.19);
+	
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+.menu h1 {
+	color:white;
+	font-family: 'Quicksand', sans-serif;
+	font-size:4rem;
+	text-align:center;
+
+}
+.menu button {
+	outline: none;
+	border:none;
+	
+	border-radius: 50%;
+	background-color:rgba(0, 255, 0,1);
+	font-family: 'Quicksand', sans-serif;
+	
+	color:white;
+	
+	position:absolute;
+	left:50%;
+	top:60%;
+	margin-left: -40px;
+	/* margin-top: -40px; */
+	width:80px;
+	height:80px;
+	font-size:1.4rem;
+
+	
+}
+
+
 .play-field {
-	width: 98%;
+	width: 96%;
 	height:90%;
 	background-color:black;
 	position:relative;
 	border-style:dashed;
 	border-color:white;
 } 
+.countdown {
+	color:white;
+	text-align:center;
+	font-family: 'Russo One', sans-serif;
+	font-size:2.5rem;
+
+}
 .dev-info p{
 	color:white;
 	font-size:1rem;
@@ -37,8 +106,6 @@ body {
 	position:absolute;
  	transition-property: transform;
 	transition-duration: 1s;
-	 
-	
 }
 
 .square{
@@ -46,7 +113,7 @@ body {
 	width: 200px;
 	background-color:rgba(255,255,255,0.0);
 	z-index:0;
-
+	display:none;
 	
 	
 	transition-property: transform;
@@ -86,7 +153,7 @@ body {
 	background-color:#3de2ff;
 	border: none;
 	position:absolute;
-	z-index:10;
+	z-index:3;
 	transition-duration: 0.4s;
 	border-radius: 99%;
 	outline: none;
@@ -101,6 +168,8 @@ body {
 	background-color:yellow;
 	display:none;
 }
+
+
 @keyframes background-color-change {
 	0% {background-color:#31f590;} /* Light Green */
 	10% {background-color:#63e319;} /* Lime Green */
@@ -140,18 +209,25 @@ body {
 }
 /*Laptop (1024px)*/
 @media only screen and (min-width: 1024px) { 
-
+/* 	.page-wrapper {
+	display:flex;
+	flex-wrap:wrap;
 	
-} 
+}  */
 /*Custume Size (1360px) */
 @media only screen and (min-width: 1360px) {
 	.dev-info p{
 	font-size:1.5rem;
-	
 	}
 	.dev-info label{
 	color:Black;
 	font-size:1.5rem;
+	}
+	.menu {
+	width: 200px;
+	height:200px;
+	background-color:red;
+	position:fixed;
 	}
 	.play-field {
 	width: 98%;
@@ -163,6 +239,3 @@ body {
 	border-color:white;
 	}
 }
-
-
-
