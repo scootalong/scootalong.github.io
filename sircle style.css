@@ -1,5 +1,9 @@
 html {
-font-size:16px;
+	font-size:16px;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
 body {
 	width: 100%;
@@ -26,23 +30,24 @@ body {
 .menu {
 	
 	width: 200px;
-	height:200px;
+	height:500px;
 	background-color:rgba(20, 23, 245,1); /*blue*/
 	
 	z-index:4;
 	border-style:dashed;
 	border-color:white;
 	box-shadow: 0 12px 16px 0 rgba(255,255,255,0.24), 0 17px 50px 0 rgba(255,255,255,0.19);
+	font-family: 'Quicksand', sans-serif;
 	
 	position: fixed;
-	top: 30%;
+	top: 50%;
 	left: 50%;
-	margin-top: -100px;
+	margin-top: -200px;
 	margin-left: -100px;
 }
 .menu h1 {
 	color:white;
-	font-family: 'Quicksand', sans-serif;
+	
 	font-size:4rem;
 	text-align:center;
 
@@ -53,13 +58,12 @@ body {
 	
 	border-radius: 50%;
 	background-color:rgba(0, 255, 0,1);
-	font-family: 'Quicksand', sans-serif;
 	
 	color:white;
 	
 	position:absolute;
 	left:50%;
-	top:60%;
+	top:78%;
 	margin-left: -40px;
 	/* margin-top: -40px; */
 	width:80px;
@@ -68,7 +72,29 @@ body {
 
 	
 }
-
+.menu label {
+	color:white;
+	font-weight:bold;
+	font-size:1.2rem;
+	padding-left:5px;
+}
+.menu p {
+	color:white;
+	display:inline;
+	font-size:1.2rem;
+	padding:10px;
+}
+.menu hr {
+	color:white;
+	width:180px;
+	border-style:dashed;
+}
+.difficulty-selector label{
+	display:none;
+}
+.difficulty-selector input{
+	display:none;
+}
 
 .play-field {
 	width: 96%;
@@ -83,17 +109,24 @@ body {
 	text-align:center;
 	font-family: 'Russo One', sans-serif;
 	font-size:2.5rem;
+	/* background-color:lime; */
+	
+
+}
+.dev-info {
+	visibility:hidden;
 
 }
 .dev-info p{
 	color:white;
 	font-size:1rem;
-	display:inline;
 	padding:10px;
+	display:inline;
 }
 .dev-info label{
 	color:Black;
 	font-size:1.2rem;
+	
 }
 
 .buffersquare {
@@ -188,6 +221,8 @@ body {
 
 
 
+
+
 /* Mobile Small (320px) */
 @media only screen and (min-width: 320px) {
 	
@@ -216,16 +251,16 @@ body {
 }  */
 /*Custume Size (1360px) */
 @media only screen and (min-width: 1360px) {
-	.dev-info p{
+	/* .dev-info p{
 	font-size:1.5rem;
 	}
 	.dev-info label{
 	color:Black;
 	font-size:1.5rem;
-	}
+	} */
 	.menu {
 	width: 200px;
-	height:200px;
+	height:500px;
 	background-color:red;
 	position:fixed;
 	}
@@ -237,5 +272,9 @@ body {
 	position:relative;
 	border-style:dashed;
 	border-color:white;
+	}
+	
+	.menu {
+	color:blue;
 	}
 }

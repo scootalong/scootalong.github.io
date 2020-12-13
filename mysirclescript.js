@@ -2,8 +2,6 @@
 	var xMouse = null;
 	var yMouse = null;
 	
-	
-
 function mouseCoords(event){
 	var xMouse = event.clientX;
 	var yMouse = event.clientY;
@@ -11,9 +9,6 @@ function mouseCoords(event){
 	document.getElementById("mouse-coordinates").innerHTML = Coords;
 	return (xMouse,yMouse);
 }
-
-
-
 
 /*Calculates size of playfield*/
 function calcSize() {
@@ -46,6 +41,7 @@ function countScore() {
 	total++;
 	score.innerHTML = total;
 	
+	
 	/*Positions score to center of the sircle as it grows*/
 	if (total >= 10 && total < 19) {
 		score.style.right = "30px";
@@ -57,9 +53,10 @@ function countScore() {
 	}
 }
 
-
+	
 /* starts a countdown timer and initates the game */
 function play() {
+	sirclemove();
 	var main = document.getElementById("main");
 	var menu = document.getElementById("menu");
 	var square = document.getElementById("square");
@@ -98,17 +95,28 @@ function play() {
 	}
 }
 
+
+	var newhighscore = 0;
 function gameover () {
-	var menu = document.getElementById("menu");
+/* 	var menu = document.getElementById("menu");
 	var square = document.getElementById("square");
-	var main = document.getElementById("main");
+	var main = document.getElementById("main"); */
+	var currentscore = document.getElementById("currentscore");
+	var highscore = document.getElementById("highscore");
+	
 	
 	menu.style.display = "block";
 	square.style.display = "none";
 	main.style.opacity = "0.7";
+	
+	if (total > newhighscore) {
+		newhighscore = total;
+		highscore.innerHTML = newhighscore;
+	} 
+	
+	currentscore.innerHTML = total;
 	total = 0;
 	score.innerHTML = total;
-	
 }
 
 /*Moves sircle to a random position */
@@ -146,10 +154,6 @@ function sirclemove() {
 	
 }
 
-
-
-
-
 /*Shows/hides dev info when clicked*/
 function viewControls() {
 	var controls = document.getElementById("dev-info");
@@ -157,26 +161,19 @@ function viewControls() {
 	var mydot = document.getElementById("dot");
 	var buffersquare = document.getElementById("buffersquare");
 	var menu = document.getElementById("menu");
-	var main = document.getElementById("main");
-
 	
-	if (controls.style.display === "inline") {
-		controls.style.display = "none";
-		mysquare.style.backgroundColor = "rgba(255,255,255,0.0)";
-		buffersquare.style.backgroundColor = "rgba(3, 252, 240,0.0)";
-		mydot.style.display = "none";
-		menu.style.display = "none";
-		main.style.opacity = "1";
-		
-		
-		
-	} else {
-		controls.style.display = "inline";
+	
+	if (controls.style.visibility === "hidden") {
+		controls.style.visibility = "visible"
+		controls.backgroundColor = "red"
 		mysquare.style.backgroundColor = "rgba(255,255,255,0.1)";
 		buffersquare.style.backgroundColor = "rgba(3, 252, 240,0.1)";
 		mydot.style.display = "block";
-		menu.style.display = "block";
-		main.style.opacity = "0.7";
+	} else {
+		controls.style.visibility = "hidden"
+		mysquare.style.backgroundColor = "rgba(255,255,255,0.0)";
+		buffersquare.style.backgroundColor = "rgba(3, 252, 240,0.0)";
+		mydot.style.display = "none";
 		
 	}
 }
