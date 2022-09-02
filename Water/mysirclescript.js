@@ -21,7 +21,7 @@ function calcSize() {
 }
 
 /* Draw */
-function Draw(event) {
+function draw(event) {
 	
 	var xMouse = event.clientX;
 	var yMouse = event.clientY;
