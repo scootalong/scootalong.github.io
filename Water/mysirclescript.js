@@ -25,7 +25,7 @@ function draw(event) {
 	var xMouse = event.clientX;
 	var yMouse = event.clientY;
 	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
-	body.style.color = red;
+	body.style.backgroundColor = red;
 	return (xMouse,yMouse);
 }
 
