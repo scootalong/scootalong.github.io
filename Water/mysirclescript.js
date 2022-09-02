@@ -20,6 +20,17 @@ function calcSize() {
 
 }
 
+/* Draw */
+function Draw(event) {
+	
+	var xMouse = event.clientX;
+	var yMouse = event.clientY;
+	
+	
+	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
+}
+
+
 /*Produces a random integer winthin a range*/
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -94,6 +105,9 @@ function play() {
 		}
 	}
 }
+
+
+
 
 
 	var newhighscore = 0;
