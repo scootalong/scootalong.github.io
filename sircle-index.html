@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sircle</title>
+	<!-- <link rel="stylesheet" href="C:\Users\10061692\Desktop\Websites\Sircle 2.0.1\sircle style.css"> Drouin SC Comp -->
+	<!-- <link rel="stylesheet" href="C:\Users\Scotthi\Desktop\Sircle 2.0.1\sircle style.css" LCC Comp> -->
+	<link rel="stylesheet" type="text/css" href="https://scootalong.github.io/sircle style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<script src="mysirclescript.js"></script>
+</head>
+<body onmousemove="mouseCoords(event)" onload="calcSize(),sirclemove()" onresize="calcSize(),sirclemove()"> 
+<div class="page-wrapper">
+	<div class = "menu" id = "menu"> 
+		<h1>Sircle</h1>
+		<button type = button onclick = "play()">Play</button>
+		<label>Your Score:</label><p id = "currentscore">---------</p><hr>
+		<label>High Score:</label><p id = "highscore">---------</p>
+		<div class = "difficulty-selector" id = "difficulty-selector"><hr>
+			<input type="radio" id="easy-peasey" name="dif-selector" value="easy-peasey">
+			<label for="easy-peasey">Easy-Peasey</label><br>
+			<input type="radio" id="medium-peasey" name="dif-selector" value="medium-peasey">
+			<label for="medium-peasey">Medium-Peasey</label><br>
+			<input type="radio" id="hard-peasey" name="dif-selector" value="hard-peasey">
+			<label for="hard-peasey">Hard-Peasey</label><br>
+		</div>
+	</div>
+	<div class = "controls">	
+		<button type = "button" onclick = "viewControls()"><svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="10.5" cy="10.5" r="8" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round"/><path d="m10.5 14.5v-4" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.5" cy="7.5" fill="#2a2e3b" r="1"/></g></svg></button>
+	</div>
+	<div class = "main" id = "main">
+		<div class = "countdown" id = "countdown">-----------</div>
+		<div class = "play-field" id = "play-field">
+		
+		<div class = "dot" id = "dot"></div>
+			<div class = "square" id="square" onmouseover="sirclemove()">
+				<div class = "buffersquare" id = "buffersquare"></div>
+				<div class ="sircle" id="sircle" onmouseenter = "startTimer()" onmouseleave = "stopTimer()">
+					<label id = "score">0</label>
+				</div>
+			</div>
+		</div>
+			
+			
+		<div class  = "dev-info" id = "dev-info">
+			<label>Mouse Coordinates</label><p id = "mouse-coordinates">------------</p>
+			<label>X Coordinate:</label><p id = "Xrandom-int">------------</p>
+			<label>Y Coordinate:</label><p id = "Yrandom-int">------------</p>
+			<label>PlayfiEld Size:</label><p id = "field-size">------------</p>
+			<label>Build Version:</label><p id = "build-version">2.0.1</p>
+
+
+			<!-- <label>Testx:</label><p id = "testx">------------</p>
+			<label>Testy:</label><p id = "testy">------------</p> -->
+			<!-- <label>Test:</label><p id = "test">------------</p> -->
+		</div>
+	</div>
+</div>
+</body>
+</html>
