@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 	<script src="mysirclescript.js"></script>
 </head>
-<body onmousemove="mouseCoords(event)" onload="calcSize(),sirclemove()" onresize="calcSize(),sirclemove()"> 
+<body onmousemove="mouseCoords(event)" onload="calcSize(),sirclemove()" onresize="calcSize(),sirclemove(), draw()"> 
 <div class="page-wrapper">
 	<div class = "controls">	
 		<button type = "button" onclick = "viewControls()"><svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="10.5" cy="10.5" r="8" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round"/><path d="m10.5 14.5v-4" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.5" cy="7.5" fill="#2a2e3b" r="1"/></g></svg></button>
@@ -36,11 +36,6 @@
 			<label>Y Coordinate:</label><p id = "Yrandom-int">------------</p>
 			<label>PlayfiEld Size:</label><p id = "field-size">------------</p>
 			<label>Build Version:</label><p id = "build-version">2.0.1</p>
-
-
-			<!-- <label>Testx:</label><p id = "testx">------------</p>
-			<label>Testy:</label><p id = "testy">------------</p> -->
-			<!-- <label>Test:</label><p id = "test">------------</p> -->
 		</div>
 	</div>
 </div>

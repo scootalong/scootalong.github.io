@@ -22,12 +22,10 @@ function calcSize() {
 
 /* Draw */
 function draw(event) {
-	
 	var xMouse = event.clientX;
 	var yMouse = event.clientY;
-	
-	
 	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
+	return (xMouse,yMouse);
 }
 
 
