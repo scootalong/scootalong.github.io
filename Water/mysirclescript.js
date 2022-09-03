@@ -28,7 +28,7 @@ function draw(event) {
 	var yMouse = event.clientY;
 	var Coords = "X coords: " + xMouse + ", Y coords: " + yMouse;
 	var mydot = document.getElementById("dot");
-	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
+	mydot.style.transform = "translateX(" + xMouse + "px" + ")" + "translateY(" + yMouse + "px" + ")";
 	return (xMouse,yMouse);
 }
 
