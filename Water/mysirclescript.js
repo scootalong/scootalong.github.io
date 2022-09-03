@@ -23,7 +23,7 @@ function calcSize() {
 /* Draw */
 function draw() {
 	var playf = document.getElementById("play-field");
-	playf.style.backgroundColor = "red";
+	playf.style.backgroundColor = "purple";
 
 	return (xMouse,yMouse);
 }
