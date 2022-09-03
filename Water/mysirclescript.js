@@ -21,10 +21,14 @@ function calcSize() {
 }
 
 /* Draw */
-function draw() {
-	var playf = document.getElementById("play-field");
-	playf.style.backgroundColor = "purple";
-
+function draw(event) {
+	/* var playf = document.getElementById("play-field");
+	playf.style.backgroundColor = "purple"; */
+	var xMouse = event.clientX;
+	var yMouse = event.clientY;
+	var Coords = "X coords: " + xMouse + ", Y coords: " + yMouse;
+	var mydot = document.getElementById("dot");
+	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
 	return (xMouse,yMouse);
 }
 
