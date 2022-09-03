@@ -141,6 +141,7 @@ function sirclemove() {
 	var mysquare = document.getElementById("square");
 	var mydot = document.getElementById("dot");
 	var buffersquare = document.getElementById("buffersquare");
+	
 
 	
 	/*Finds the size of the current play field */
@@ -161,6 +162,7 @@ function sirclemove() {
 	document.getElementById("Yrandom-int").innerHTML = Yrandom;
 	mysquare.style.transform = "translateX(" + Xrandom + ")" + "translateY(" + Yrandom + ")";
 	mydot.style.transform = "translateX(" + Xrandom + ")" + "translateY(" + Yrandom + ")";
+	mydot.style.backgroundColor = "red";
 
 	
 	
