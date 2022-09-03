@@ -6,17 +6,7 @@ function mouseCoords(event){
 	var xMouse = event.clientX;
 	var yMouse = event.clientY;
 	var Coords = "X coords: " + xMouse + ", Y coords: " + yMouse;
-	document.getElementById("mouse-coordinates").innerHTML = Coords;
-
-	var mydot = document.getElementById("dot");
-	//mydot.style.background = "purple";
-
-	var Xrandom = getRndInteger(0,Xrange) + "px";
-	var Yrandom = getRndInteger(0,Yrange) + "px"; 
-	mydot.style.transform = "translateX(" + Xrandom + ")" + "translateY(" + Yrandom + ")";
-
-	
-	
+	document.getElementById("mouse-coordinates").innerHTML = Coords;	
 	return (xMouse,yMouse);
 }
 
@@ -31,11 +21,10 @@ function calcSize() {
 }
 
 /* Draw */
-function draw(event) {
-	var xMouse = event.clientX;
-	var yMouse = event.clientY;
-	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
-	body.style.backgroundColor = red;
+function draw() {
+	var playf = document.getElementById("play-field");
+	playf.style.backgroundColor = "red";
+
 	return (xMouse,yMouse);
 }
 
