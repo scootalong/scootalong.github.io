@@ -9,7 +9,7 @@ function mouseCoords(event){
 	document.getElementById("mouse-coordinates").innerHTML = Coords;
 
 	var mydot = document.getElementById("dot");
-	mydot.style.color = "purple";
+	mydot.style.background = "purple";
 	//mydot.style.transform = "translateX(" + Xrandom + ")" + "translateY(" + Yrandom + ")";
 
 	
