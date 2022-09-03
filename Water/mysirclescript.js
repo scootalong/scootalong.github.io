@@ -21,33 +21,15 @@ function calcSize() {
 }
 
 /* Draw */
-function draw() {
-	var mysquare = document.getElementById("square");
+function draw(event) {
+	
+	var xMouse = event.clientX + "px";
+	var yMouse = event.clientY + "px";
 	var mydot = document.getElementById("dot");
-	var buffersquare = document.getElementById("buffersquare");
-	
 
+	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
 	
-	/*Finds the size of the current play field */
-	var Xwidth = document.getElementById("play-field").clientWidth;
-	var Yheight = document.getElementById("play-field").clientHeight;
-	
-	/*Creates a buffer of 200px from the border of play field*/
-	var Xrange = (Xwidth - 200);
-	var Yrange = (Yheight- 200); 
-	
-	
-	
-	var Xrandom = getRndInteger(0,Xrange) + "px";
-	var Yrandom = getRndInteger(0,Yrange) + "px"; 
-	var XYCoords = (Xrandom + "," + Yrandom)
-	
-	document.getElementById("Xrandom-int").innerHTML = Xrandom;
-	document.getElementById("Yrandom-int").innerHTML = Yrandom;
-	mysquare.style.transform = "translateX(" + Xrandom + ")" + "translateY(" + Yrandom + ")";
-	mydot.style.transform = "translateX(" + Xrandom + ")" + "translateY(" + Yrandom + ")";
-	
-	
+	return (xMouse,yMouse);
 }
 
 
