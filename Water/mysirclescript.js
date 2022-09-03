@@ -7,7 +7,7 @@ function mouseCoords(event){
 	var yMouse = event.clientY;
 	var Coords = "X coords: " + xMouse + ", Y coords: " + yMouse;
 	document.getElementById("mouse-coordinates").innerHTML = Coords;
-	timedisplay.style.color = "purple";
+	body.style.color = "purple";
 	
 	return (xMouse,yMouse);
 }
