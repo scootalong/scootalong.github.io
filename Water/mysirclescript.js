@@ -21,7 +21,7 @@ function calcSize() {
 }
 
 /* Draw */
-function draw(event) {
+function draw() {
 	var mysquare = document.getElementById("square");
 	var mydot = document.getElementById("dot");
 	var buffersquare = document.getElementById("buffersquare");
