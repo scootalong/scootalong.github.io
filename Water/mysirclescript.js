@@ -28,7 +28,7 @@ function draw(event) {
 	var playf = document.getElementById("play-field");
 	var mydot = document.getElementById("dot");
 
-	playf.style.cursor = 'none';
+	// playf.style.cursor = 'none'; THIS WORKS BUT DONT NEED IT YET
 	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
 	
 	return (xMouse,yMouse);
