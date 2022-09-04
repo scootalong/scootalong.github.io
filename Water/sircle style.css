@@ -201,7 +201,7 @@ body {
 	width:10px;
 	background-color:yellow;
 	transition-property: transform;
-	transition-duration: 3s;
+	transition-duration: 1s;
 	padding:0px;
 }
 
