@@ -24,7 +24,7 @@ function calcSize() {
 function draw(event) {
 	
 	var xMouse = event.clientX - 0 + "px";
-	var yMouse = event.clientY - 0 + "px";
+	var yMouse = event.clientY - 40 + "px";
 	var playf = document.getElementById("play-field");
 	var mydot = document.getElementById("dot");
 
