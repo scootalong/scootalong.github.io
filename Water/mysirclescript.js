@@ -25,8 +25,10 @@ function draw(event) {
 	
 	var xMouse = event.clientX - 110 + "px";
 	var yMouse = event.clientY - 110 + "px";
+	var playf = document.getElementById("play-field");
 	var mydot = document.getElementById("dot");
 
+	playf.style.cursor = 'none';
 	mydot.style.transform = "translateX(" + xMouse + ")" + "translateY(" + yMouse + ")";
 	
 	return (xMouse,yMouse);
